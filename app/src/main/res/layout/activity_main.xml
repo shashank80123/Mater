@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/veg"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/leaf"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/get_your_groceries_ndelivered_to_your_home"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:text="@string/the_best_delivery_app_in_town_for_ndelivering_your_daily_fresh_groceries"
+        android:textSize="16sp"
+        android:layout_marginBottom="25dp" />
+
+    <Button
+        android:id="@+id/mainshop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shop_now"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:backgroundTint="#0C8E12"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Grocery store</string>
+    <string name="get_your_groceries_ndelivered_to_your_home">Get your groceries\ndelivered to your home</string>
+    <string name="search_category">Search category</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="the_best_delivery_app_in_town_for_ndelivering_your_daily_fresh_groceries">The best delivery app in town for\ndelivering your daily fresh groceries</string>
+    <string name="shop_now">Shop Now</string>
+    <string name="todo">TODO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

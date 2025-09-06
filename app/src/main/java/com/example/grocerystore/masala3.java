@@ -1,0 +1,74 @@
+package com.example.grocerystore;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+public class masala3 extends Fragment {
+
+    private ImageButton fabBack, btnAdd, btnSubtract;
+    private TextView solutionTv;
+    private Button addToCartBtn;
+    private int quantity = 0;
+
+    public masala3() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Make sure the layout file is named correctly, e.g., fragment_masala3.xml
+        return inflater.inflate(R.layout.fragment_masala3, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Bind UI elements
+        fabBack = view.findViewById(R.id.fab_back);
+        btnAdd = view.findViewById(R.id.btn_add);
+        btnSubtract = view.findViewById(R.id.btn_subtract);
+        solutionTv = view.findViewById(R.id.solution_Tv);
+        addToCartBtn = view.findViewById(R.id.addtocart);
+
+        updateQuantity();
+
+        fabBack.setOnClickListener(v -> requireActivity().onBackPressed());
+
+        btnAdd.setOnClickListener(v -> {
+            quantity++;
+            updateQuantity();
+        });
+
+        btnSubtract.setOnClickListener(v -> {
+            if (quantity > 0) {
+                quantity--;
+                updateQuantity();
+            }
+        });
+
+        addToCartBtn.setOnClickListener(v -> {
+            if (quantity > 0) {
+                Toast.makeText(getContext(), quantity + " Chicken masala(s) added to cart", Toast.LENGTH_SHORT).show();
+                // Logic to actually add to cart could go here
+            } else {
+                Toast.makeText(getContext(), "Please select quantity first", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void updateQuantity() {
+        solutionTv.setText(String.valueOf(quantity));
+    }
+}
